@@ -9,7 +9,7 @@
 #include <simplehttp/queue.h>
 #include <simplehttp/uthash.h>
 #include <simplehttp/simplehttp.h>
-#include <json/json.h>
+#include <json-c/json.h>
 #include <leveldb/c.h>
 #include <sys/socket.h>
 #include "http-internal.h"

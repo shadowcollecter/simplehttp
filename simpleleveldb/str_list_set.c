@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <json/json.h>
+#include <json-c/json.h>
 #include "str_list_set.h"
 
 void prepare_token_list(struct ListInfo *list_info, char **db_data, size_t db_data_len, char sep)

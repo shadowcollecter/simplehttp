@@ -9,7 +9,16 @@ struct simplehttp_request {
     int async;
     TAILQ_ENTRY(simplehttp_request) entries;
 };
-TAILQ_HEAD(, simplehttp_request) simplehttp_reqs;
+// TAILQ_HEAD(, simplehttp_request) simplehttp_reqs;
+
+
+struct simplehttp_reqs_head {
+    struct simplehttp_request *tqh_first;
+    struct simplehttp_request **tqh_last;
+};
+
+extern struct simplehttp_reqs_head simplehttp_reqs;
+
 
 struct simplehttp_request *simplehttp_request_new(struct evhttp_request *req, uint64_t id);
 struct simplehttp_request *simplehttp_request_get(struct evhttp_request *req);

@@ -9,6 +9,7 @@
 #include "stat.h"
 
 extern int simplehttp_logging;
+struct simplehttp_reqs_head simplehttp_reqs = { NULL, &simplehttp_reqs.tqh_first };
 
 struct simplehttp_request *simplehttp_request_new(struct evhttp_request *req, uint64_t id)
 {
