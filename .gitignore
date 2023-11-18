@@ -14,4 +14,4 @@ test_output
 .sw[op]
 *.egg-info/
 test/
-simplehttp/test/
+simpleleveldb/test/
